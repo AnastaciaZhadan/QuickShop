@@ -73,6 +73,10 @@
     <Compile Include="UserCardPanel\UserCardPanel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{74c29404-a8aa-430d-bb18-e8595d6a8c9a}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QSDataAccess\QSDataAccess.csproj">
       <Project>{294526c3-b0c2-437f-8f03-38ef88263f6f}</Project>
       <Name>QSDataAccess</Name>

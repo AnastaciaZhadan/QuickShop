@@ -1,0 +1,9 @@
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\Models.dll.config
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\Models.dll
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\Models.pdb
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\EntityFramework.dll
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\EntityFramework.xml
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\obj\Debug\Models.dll
+C:\Users\Anastacia\Documents\Visual Studio 2013\Projects\QuickShop\Models\obj\Debug\Models.pdb

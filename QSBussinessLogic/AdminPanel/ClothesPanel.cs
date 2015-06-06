@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using QSDataAccess;
 using QSDataAccess.Clothes;
+using Models;
 
 namespace QSBussinessLogic.AdminPanel
 {
     class ClothesPanel
     {
-        IClothes clothesDataAcess;
+        IRepository<ClothesItem> clothesDataAcess;
         public bool AddShoe(string shoeData)
         {
             ClothesItem shoe = FormClothesItem(shoeData);
@@ -45,9 +46,9 @@ namespace QSBussinessLogic.AdminPanel
 
             return clothes;
         }
-        public bool DeleteShoe(int id)
+        public bool DeleteClothes(int id)
         {
-            ClothesItem clothesItem = clothesDataAcess.GetClothesItemById(id);
+            ClothesItem clothesItem = clothesDataAcess.GetById(id);
             try
             {
                 clothesDataAcess.Delete(clothesItem);
@@ -62,10 +63,10 @@ namespace QSBussinessLogic.AdminPanel
             }
             return true;
         }
-        public string EditShoe(string clothesData, int id)
+        public string EditClothes(string clothesData, int id)
         {
             ClothesItem clothes = FormClothesItem(clothesData);
-            ClothesItem clothesItemEdit = clothesDataAcess.GetClothesItemById(id);
+            ClothesItem clothesItemEdit = clothesDataAcess.GetById(id);
             clothesItemEdit.ClothesName = clothes.ClothesName;
             clothesItemEdit.ClothesKind = clothes.ClothesKind;
             clothesItemEdit.InterClothSize = clothes.InterClothSize;

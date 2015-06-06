@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using QSDataAccess;
 using QSDataAccess.Shoes;
+using Models;
 
 namespace QSBussinessLogic.AdminPanel
 {
     public class ShoePanel
     {
-        IShoes shoeDataAccess;
+        IRepository<ShoesItem> shoeDataAccess;
         public bool AddShoe(string shoeData)
         {
             ShoesItem shoe = FormShoeItem(shoeData);
@@ -46,7 +47,7 @@ namespace QSBussinessLogic.AdminPanel
         }
         public bool DeleteShoe(int id)
         {
-            ShoesItem shoeItem = shoeDataAccess.GetShoesItemById(id);
+            ShoesItem shoeItem = shoeDataAccess.GetById(id);
             try
             {
                 shoeDataAccess.Delete(shoeItem);
@@ -64,7 +65,7 @@ namespace QSBussinessLogic.AdminPanel
         public string EditShoe(string shoeData, int id)
         {
             ShoesItem shoe = FormShoeItem(shoeData);
-            ShoesItem shoeItemEdit = shoeDataAccess.GetShoesItemById(id);
+            ShoesItem shoeItemEdit = shoeDataAccess.GetById(id);
             shoeItemEdit.ShoeName = shoe.ShoeName;
             shoeItemEdit.ShoeKind = shoe.ShoeKind;
             shoeItemEdit.EuroShoeSize = shoe.EuroShoeSize;

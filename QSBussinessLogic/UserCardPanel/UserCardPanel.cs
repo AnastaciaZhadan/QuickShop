@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using QSDataAccess;
 using QSDataAccess.UserCards;
+using Models;
 
 namespace QSBussinessLogic.UserCardPanel
 {
     class UserCardPanel
     {
-        IUserCards userCardDataAccess;
+        IRepository<UserSizeCard> userCardDataAccess;
         public UserCardPanel()
         {
             userCardDataAccess = new UserCard();
@@ -48,7 +49,7 @@ namespace QSBussinessLogic.UserCardPanel
         }
         public bool DeleteShoe(int id)
         {
-            UserSizeCard userCard = userCardDataAccess.GetUserSizeCardById(id);
+            UserSizeCard userCard = userCardDataAccess.GetById(id);
             try
             {
                 userCardDataAccess.Delete(userCard);
@@ -66,7 +67,7 @@ namespace QSBussinessLogic.UserCardPanel
         public string EditShoe(string userCardData, int id)
         {
             UserSizeCard userCard = FormUserCard(userCardData);
-            UserSizeCard userCardEdit = userCardDataAccess.GetUserSizeCardById(id);
+            UserSizeCard userCardEdit = userCardDataAccess.GetById(id);
             userCardEdit.UserId = userCard.UserId;
             userCardEdit.Height = userCard.Height;
             userCardEdit.InterClothSize = userCard.InterClothSize;

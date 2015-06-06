@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3eb62ba4f1114d6e99944f6ad3607703" Name="Diagram1">
+        <EntityTypeShape EntityType="ShoppingDBModel.ClothesIMG" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingDBModel.ClothesItem" Width="1.5" PointX="1.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingDBModel.ShoeIMG" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingDBModel.ShoesItem" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ShoppingDBModel.FK__ClothesIM__Cloth__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="ShoppingDBModel.FK__ShoeIMG__ShoeId__286302EC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

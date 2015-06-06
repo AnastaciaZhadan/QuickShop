@@ -31,12 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -46,72 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="ClothesIMG.cs">
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClothesItem.cs">
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
     <Compile Include="Clothes\Clothes.cs" />
-    <Compile Include="Clothes\IClothes.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuickShopData.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuickShopData.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuickShopData.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuickShopData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuickShopData.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ShoeIMG.cs">
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShoesItem.cs">
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shoes\IShoes.cs" />
     <Compile Include="Shoes\Shoes.cs" />
-    <Compile Include="UserCards\IUserCards.cs" />
     <Compile Include="UserCards\UserCard.cs" />
-    <Compile Include="UserSizeCard.cs">
-      <DependentUpon>QuickShopData.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="QuickShopData.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuickShopData.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="QuickShopData.edmx.diagram">
-      <DependentUpon>QuickShopData.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="QuickShopData.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuickShopData.edmx</DependentUpon>
-      <LastGenOutput>QuickShopData.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="QuickShopData.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuickShopData.edmx</DependentUpon>
-      <LastGenOutput>QuickShopData.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{74c29404-a8aa-430d-bb18-e8595d6a8c9a}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

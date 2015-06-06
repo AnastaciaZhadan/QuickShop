@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models;
 
 namespace QSDataAccess.UserCards
 {
-    public class UserCard:IUserCards
+    public class UserCard : IRepository<UserSizeCard>
     {
-        private QuickShoppingDBEntities dataBase;
+        private UserDBEntities dataBase;
         public UserCard()
         {
-            dataBase = new QuickShoppingDBEntities();
+            dataBase = new UserDBEntities();
         }
-        public bool Insert(UserSizeCard userCardItem)
+        public bool Insert(UserSizeCard item)
         {
             try
             {
-                dataBase.UserSizeCards.Add(userCardItem);
+                dataBase.UserSizeCards.Add(item);
                 return true;
             }
             catch(Exception ex)
@@ -38,15 +39,15 @@ namespace QSDataAccess.UserCards
             }
             
         }
-        public UserSizeCard GetUserSizeCardById(int id)
+        public UserSizeCard GetById(int id)
         {
             return dataBase.UserSizeCards.Find(id);
         }
-        public bool Delete(UserSizeCard userCardItem)
+        public bool Delete(UserSizeCard item)
         {
             try
             {
-                dataBase.UserSizeCards.Remove(userCardItem);
+                dataBase.UserSizeCards.Remove(item);
                 return true;
             }
             catch (Exception ex)

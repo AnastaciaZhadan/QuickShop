@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShoppingDBModelStoreContainer" CdmEntityContainer="ShoppingDBEntities">
+    <EntitySetMapping Name="ClothesIMGs">
+      <EntityTypeMapping TypeName="ShoppingDBModel.ClothesIMG">
+        <MappingFragment StoreEntitySet="ClothesIMG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClothesPhoto" ColumnName="ClothesPhoto" />
+          <ScalarProperty Name="ClothesId" ColumnName="ClothesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClothesItems">
+      <EntityTypeMapping TypeName="ShoppingDBModel.ClothesItem">
+        <MappingFragment StoreEntitySet="ClothesItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClothesName" ColumnName="ClothesName" />
+          <ScalarProperty Name="ClothesKind" ColumnName="ClothesKind" />
+          <ScalarProperty Name="InterClothSize" ColumnName="InterClothSize" />
+          <ScalarProperty Name="ModelHeight" ColumnName="ModelHeight" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoeIMGs">
+      <EntityTypeMapping TypeName="ShoppingDBModel.ShoeIMG">
+        <MappingFragment StoreEntitySet="ShoeIMG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShoePhoto" ColumnName="ShoePhoto" />
+          <ScalarProperty Name="ShoeId" ColumnName="ShoeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoesItems">
+      <EntityTypeMapping TypeName="ShoppingDBModel.ShoesItem">
+        <MappingFragment StoreEntitySet="ShoesItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShoeName" ColumnName="ShoeName" />
+          <ScalarProperty Name="ShoeKind" ColumnName="ShoeKind" />
+          <ScalarProperty Name="EuroShoeSize" ColumnName="EuroShoeSize" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
