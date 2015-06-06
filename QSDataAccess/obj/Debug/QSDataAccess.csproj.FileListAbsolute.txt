@@ -1,0 +1,8 @@
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\bin\Debug\QSDataAccess.dll.config
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\bin\Debug\QSDataAccess.dll
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\bin\Debug\QSDataAccess.pdb
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\bin\Debug\EntityFramework.dll
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\bin\Debug\EntityFramework.xml
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\obj\Debug\QSDataAccess.csprojResolveAssemblyReference.cache
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\obj\Debug\QSDataAccess.dll
+c:\users\anastacia\documents\visual studio 2013\Projects\QuickShop\QSDataAccess\obj\Debug\QSDataAccess.pdb

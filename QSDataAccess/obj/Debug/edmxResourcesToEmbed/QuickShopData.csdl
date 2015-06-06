@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuickShoppingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClothesIMG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClothesPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ClothesId" Type="Int32" />
+    <NavigationProperty Name="ClothesItem" Relationship="Self.FK__ClothesIM__Cloth__25869641" FromRole="ClothesIMG" ToRole="ClothesItems" />
+  </EntityType>
+  <EntityType Name="ClothesItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClothesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClothesKind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InterClothSize" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ModelHeight" Type="Int32" />
+    <NavigationProperty Name="ClothesIMGs" Relationship="Self.FK__ClothesIM__Cloth__25869641" FromRole="ClothesItems" ToRole="ClothesIMG" />
+  </EntityType>
+  <EntityType Name="ShoeIMG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ShoePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ShoeId" Type="Int32" />
+    <NavigationProperty Name="ShoesItem" Relationship="Self.FK__ShoeIMG__ShoeId__286302EC" FromRole="ShoeIMG" ToRole="ShoesItems" />
+  </EntityType>
+  <EntityType Name="ShoesItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ShoeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShoeKind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EuroShoeSize" Type="Int32" />
+    <NavigationProperty Name="ShoeIMGs" Relationship="Self.FK__ShoeIMG__ShoeId__286302EC" FromRole="ShoesItems" ToRole="ShoeIMG" />
+  </EntityType>
+  <EntityType Name="UserSizeCard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InterClothSize" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="EuroShoeSize" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Width" Type="Double" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__ClothesIM__Cloth__25869641">
+    <End Role="ClothesItems" Type="Self.ClothesItem" Multiplicity="0..1" />
+    <End Role="ClothesIMG" Type="Self.ClothesIMG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClothesItems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClothesIMG">
+        <PropertyRef Name="ClothesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoeIMG__ShoeId__286302EC">
+    <End Role="ShoesItems" Type="Self.ShoesItem" Multiplicity="0..1" />
+    <End Role="ShoeIMG" Type="Self.ShoeIMG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoesItems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShoeIMG">
+        <PropertyRef Name="ShoeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuickShoppingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClothesIMGs" EntityType="Self.ClothesIMG" />
+    <EntitySet Name="ClothesItems" EntityType="Self.ClothesItem" />
+    <EntitySet Name="ShoeIMGs" EntityType="Self.ShoeIMG" />
+    <EntitySet Name="ShoesItems" EntityType="Self.ShoesItem" />
+    <EntitySet Name="UserSizeCards" EntityType="Self.UserSizeCard" />
+    <AssociationSet Name="FK__ClothesIM__Cloth__25869641" Association="Self.FK__ClothesIM__Cloth__25869641">
+      <End Role="ClothesItems" EntitySet="ClothesItems" />
+      <End Role="ClothesIMG" EntitySet="ClothesIMGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoeIMG__ShoeId__286302EC" Association="Self.FK__ShoeIMG__ShoeId__286302EC">
+      <End Role="ShoesItems" EntitySet="ShoesItems" />
+      <End Role="ShoeIMG" EntitySet="ShoeIMGs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuickShoppingDBModelStoreContainer" CdmEntityContainer="QuickShoppingDBEntities">
+    <EntitySetMapping Name="ClothesIMGs">
+      <EntityTypeMapping TypeName="QuickShoppingDBModel.ClothesIMG">
+        <MappingFragment StoreEntitySet="ClothesIMG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClothesPhoto" ColumnName="ClothesPhoto" />
+          <ScalarProperty Name="ClothesId" ColumnName="ClothesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClothesItems">
+      <EntityTypeMapping TypeName="QuickShoppingDBModel.ClothesItem">
+        <MappingFragment StoreEntitySet="ClothesItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClothesName" ColumnName="ClothesName" />
+          <ScalarProperty Name="ClothesKind" ColumnName="ClothesKind" />
+          <ScalarProperty Name="InterClothSize" ColumnName="InterClothSize" />
+          <ScalarProperty Name="ModelHeight" ColumnName="ModelHeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoeIMGs">
+      <EntityTypeMapping TypeName="QuickShoppingDBModel.ShoeIMG">
+        <MappingFragment StoreEntitySet="ShoeIMG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShoePhoto" ColumnName="ShoePhoto" />
+          <ScalarProperty Name="ShoeId" ColumnName="ShoeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoesItems">
+      <EntityTypeMapping TypeName="QuickShoppingDBModel.ShoesItem">
+        <MappingFragment StoreEntitySet="ShoesItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShoeName" ColumnName="ShoeName" />
+          <ScalarProperty Name="ShoeKind" ColumnName="ShoeKind" />
+          <ScalarProperty Name="EuroShoeSize" ColumnName="EuroShoeSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSizeCards">
+      <EntityTypeMapping TypeName="QuickShoppingDBModel.UserSizeCard">
+        <MappingFragment StoreEntitySet="UserSizeCard">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InterClothSize" ColumnName="InterClothSize" />
+          <ScalarProperty Name="EuroShoeSize" ColumnName="EuroShoeSize" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
